@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crash Game - Spinsala</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="./logo.png" alt="Spinsala Logo" class="logo">
+  </header>
+  <div id="history-bar" class="history-bar">
+    <!-- Crash history will be dynamically populated here -->
+  </div>
+  <div class="container">
+    <div class="player-list">
+      <h2>Player Bets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Bet</th>
+            <th>@</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
+        <tbody id="player-table">
+          <!-- Player data will populate here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    <div class="game-area">
+      <h1>Crash Game - Spinsala</h1>
+      <div id="multiplier-display">1.00x</div>
+      <div class="rocket-container">
+        <img src="./rocket.png" alt="Rocket" class="rocket" id="rocket">
+        <div class="smoke-container" id="smoke-container"></div>
+      </div>
+      <div id="game-status"></div>
+      <div class="controls">
+        <input type="number" id="bet-amount" placeholder="Bet Amount ($)" step="0.01" min="0.01">
+        <input type="number" id="auto-cashout" placeholder="Auto Cashout (e.g., 2.00x)" step="0.01" min="1.01">
+        <button id="place-bet">Place Bet</button>
+        <button id="cashout" disabled>Cash Out</button>
+      </div>
+    </div>
+  </div>
+  <!-- Sound Effects -->
+  <audio id="rocket-sound" src="./rocket_launch.mp3"></audio>
+  <audio id="explosion-sound" src="./explosion.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
